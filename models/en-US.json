@@ -1,7 +1,7 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "greeter",
+            "invocationName": "demo remindify",
             "intents": [
                 {
                     "name": "AMAZON.FallbackIntent",
