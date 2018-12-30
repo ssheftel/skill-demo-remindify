@@ -12,24 +12,14 @@
                     "samples": []
                 },
                 {
-                    "name": "AMAZON.HelpIntent",
-                    "samples": []
-                },
-                {
                     "name": "AMAZON.StopIntent",
                     "samples": []
                 },
                 {
-                    "name": "HelloWorldIntent",
+                    "name": "NotifyMeIntent",
                     "slots": [],
                     "samples": [
-                        "how are you",
-                        "say hi world",
-                        "say hi",
-                        "hi",
-                        "hello",
-                        "say hello world",
-                        "say hello"
+                        "notify me"
                     ]
                 }
             ],

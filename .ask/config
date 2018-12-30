@@ -9,8 +9,8 @@
             "alexaUsage": [
               "custom/default"
             ],
-            "runtime": "python3.6",
-            "handler": "hello_world.handler"
+            "runtime": "python3.7",
+            "handler": "remindify.handler"
           }
         ]
       },

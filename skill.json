@@ -1,32 +1,34 @@
 {
-    "manifest": {
-      "publishingInformation": {
-        "locales": {
-          "en-US": {
-            "summary": "Sample Short Description",
-            "examplePhrases": [
-              "Alexa open hello decorator world",
-              "hello",
-              "help"
-            ],
-            "name": "Hello Decorator World",
-            "description": "Sample Full Description"
-          }
-        },
-        "isAvailableWorldwide": true,
-        "testingInstructions": "Sample Testing Instructions.",
-        "category": "KNOWLEDGE_AND_TRIVIA",
-        "distributionCountries": []
-      },
-      "apis": {
-        "custom": {
-          "endpoint": {
-            "sourceDir": "lambda/py",
-            "uri": "ask-custom-helloworld-decorators-default"
-          }
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "Demo of the Reminder API",
+          "examplePhrases": [
+            "Alexa open demo remindify"
+          ],
+          "name": "skill-demo-remindify",
+          "description": "Demo of the Reminder API"
         }
       },
-      "manifestVersion": "1.0"
-    }
+      "isAvailableWorldwide": true,
+      "testingInstructions": "Sample Testing Instructions.",
+      "category": "KNOWLEDGE_AND_TRIVIA",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "sourceDir": "lambda/py/lambda_upload",
+          "uri": "ask-custom-skill-demo-remindify-default"
+        }
+      }
+    },
+    "manifestVersion": "1.0",
+    "permissions": [
+      {
+        "name": "alexa::alerts:reminders:skill:readwrite"
+      }
+    ]
   }
-  
+}
