@@ -13,7 +13,7 @@
             "codeUri": "lambda/py/lambda_upload",
             "functionName": "ask-custom-skill-demo-remindify-default",
             "handler": "remindify.handler",
-            "revisionId": "3dddd601-9d23-4975-848a-b0846267aee5",
+            "revisionId": "cbf78083-ae10-4799-b0f1-06c2e927550f",
             "runtime": "python3.7"
           }
         ],

@@ -3,7 +3,9 @@
 # This is a simple Reminder Alexa Skill, built using
 # the decorators approach in skill builder.
 import logging
+import datetime
 
+import pytz
 from ask_sdk_core.api_client import DefaultApiClient
 from ask_sdk_core.skill_builder import SkillBuilder, CustomSkillBuilder
 from ask_sdk_core.utils import is_request_type, is_intent_name
@@ -49,7 +51,10 @@ def notify_me_intent_handler(handler_input: HandlerInput) -> Response:
             .set_card(AskForPermissionsConsentCard(permissions=REQUIRED_PERMISSIONS)) \
             .response
 
-    notification_time = "2018-12-30T17:50:00.00"
+    now = datetime.datetime.now(pytz.timezone(TIME_ZONE_ID))
+    five_mins_from_now = now + datetime.timedelta(minutes=+5)
+    notification_time = five_mins_from_now.strftime("%Y-%m-%dT%H:%M:%S")
+
     trigger = Trigger(TriggerType.SCHEDULED_ABSOLUTE, notification_time, time_zone_id=TIME_ZONE_ID)
     text = SpokenText(locale='en-US', ssml='<speak>This is your reminder</speak>', text='This is your reminder')
     alert_info = AlertInfo(SpokenInfo([text]))
